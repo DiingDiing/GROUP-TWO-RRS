@@ -7,7 +7,7 @@
     <h1>Railway Reservation</h1>
     <form method="POST" action="/reserve">
         <label for="train">Select a train:</label>
-        <select name="train" id="train">
+        <select name="train" id="train" required>
             {% for train, seats in available_seats.items() %}
                 <option value="{{ train }}">{{ train }} ({{ seats }} seats available)</option>
             {% endfor %}
@@ -18,6 +18,12 @@
         <br>
         <label for="num_tickets">Number of Tickets:</label>
         <input type="number" name="num_tickets" required>
+        <br>
+        <label for="travel_class">Select Travel Class:</label>
+        <select name="travel_class" id="travel_class" required>
+            <option value="FirstClass">First Class</option>
+            <option value="SecondClass">Second Class</option>
+        </select>
         <br>
         <input type="submit" value="Reserve Tickets">
     </form>
