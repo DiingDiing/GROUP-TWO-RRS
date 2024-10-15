@@ -1,4 +1,4 @@
--- Create the reservations table
+-- Create the reservation table
 CREATE TABLE reservations (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
     train VARCHAR(255),
